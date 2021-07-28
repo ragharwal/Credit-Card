@@ -58,6 +58,7 @@ export default function CreditCard() {
           <div>
               {/* Input Field for Expiry Month & Year */}
               <Field 
+                style={{height: "20px", width: "10px"}}
                 name="expiry"
                 component="input"
                 type="text"
@@ -66,7 +67,8 @@ export default function CreditCard() {
                 format={formatExpirationDate}
               />
               {/* Input Field for CVC */}
-              <Field
+              <Field 
+                style={{height: "20px", width: "10px"}}
                 name="cvc"
                 component="input"
                 type="text"
@@ -75,6 +77,7 @@ export default function CreditCard() {
                 format={formatCVC}
               />
             </div>
+            <center>
             <div classname = "buttons">
                  {/* Submit Button (Stores entered value temporary in JSON Format) */}
               <button type  = "submit" disabled = {submitting}>
@@ -85,6 +88,7 @@ export default function CreditCard() {
                 Reset
               </button>
             </div>
+            </center>
           </form>
         )
       }}

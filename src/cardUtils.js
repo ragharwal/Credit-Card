@@ -30,7 +30,7 @@ export function formatCreditCardNumber(value) {
       nextValue = `${clearValue.slice(0, 4)} ${clearValue.slice(
         4,
         8
-      )} ${clearValue.slice(8, 12)} ${clearValue.slice(12, 15)}`
+      )} ${clearValue.slice(8, 12)} ${clearValue.slice(12, 19)}`
       break
   }
 
@@ -57,4 +57,8 @@ export function formatExpirationDate(value) {
   }
 
   return clearValue
+}
+
+export function formatFormData(data) {
+  return Object.keys(data).map(d => `${d}: ${data[d]}`);
 }
